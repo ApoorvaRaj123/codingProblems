@@ -3,7 +3,7 @@
 
 using namespace std;
 
-
+// This function answer as a floor value and not a precise value.
 int floorSqrt(int n) {
 
   int s = 0;
@@ -27,6 +27,24 @@ int floorSqrt(int n) {
       s = m + 1;
     }
     m = s + (e - s) / 2;
+  }
+  return ans;
+}
+
+
+// For more precision . i.e including decimal values apply this below function
+
+double morePrecision(int n, int precision, int tempSol){
+
+  double factor = 1;
+  double ans = tempSol;
+
+  for(int  i = 0; i < precision; i++){
+    factor = factor/10;
+
+    for(int j = ans; j*j < n; j = j + factor){
+      ans = j;
+    }
   }
   return ans;
 }

@@ -15,3 +15,18 @@ int findDuplicate(vector<int> &arr)
     }
 	return ans;
 }
+
+
+
+
+//2nd method - Efficient method
+
+
+int findDuplicate(vector<int> &arr) 
+{
+    int ans = 0;
+    for(int i = 0;i<=arr.size()-1;i++){
+        ans = ans ^ arr[i] ^ i; 
+    }
+	return ans;
+}

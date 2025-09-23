@@ -8,8 +8,7 @@ vector<int> findUnion(vector<int>& a, vector<int>& b) {
   
   	for(int i = 0; i < a.size(); i++){
       
-      	// check if the element is already 
-        // in the result to avoid duplicates
+      	
         int j;
         for (j = 0; j < res.size(); j++) {
             if (res[j] == a[i]) 
@@ -22,8 +21,7 @@ vector<int> findUnion(vector<int>& a, vector<int>& b) {
 
   	for(int i = 0; i < b.size(); i++){
       
-      	// check if the element is already 
-        // in the result to avoid duplicates
+      	
         int j;
         for (j = 0; j < res.size(); j++) {
             if (res[j] == b[i]) 
